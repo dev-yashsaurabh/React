@@ -29,7 +29,7 @@ function PasswordGenerator() {
 
     const copyPasswordToClipboard = useCallback(() => {
         passwordRef.current?.select();
-        passwordRef.current?.setSelectionRange(0, 999);
+        // passwordRef.current?.setSelectionRange(0, 999);
         window.navigator.clipboard.writeText(password)
     }, [password]);
 
@@ -43,6 +43,7 @@ function PasswordGenerator() {
             className="outline-none w-full py-1 px-3"
             placeholder="Password"
             readOnly
+            //important line
             ref={passwordRef}
         />
         <button
