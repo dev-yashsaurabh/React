@@ -2,11 +2,13 @@ import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 // import App from './App';
-import PasswordGenerator from './components/PasswordGenerator';
+import { Provider } from 'react-redux'
+import { store } from './store/store';
+import Todos from './components/todos/Todos';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <PasswordGenerator />
-  </React.StrictMode>
+  <Provider store={store}>
+    <Todos />
+  </Provider>
 );
